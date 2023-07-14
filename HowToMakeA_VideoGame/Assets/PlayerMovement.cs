@@ -19,13 +19,13 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("d"))
         {
             // Only executed if condition is met
-            rb.AddForce(sidewayForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sidewayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("a"))
         {
             // Only executed if condition is met
-            rb.AddForce(-sidewayForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sidewayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
